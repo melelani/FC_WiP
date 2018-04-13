@@ -23,7 +23,7 @@ body {
   width: 100%;
   max-width: 360px;
   padding-top: 56px;
-  margin: 0;
+  margin: 0 auto;
 
 }
 
@@ -40,7 +40,6 @@ body {
 }
 
 
-/* Shall I find a better Material Design status img that has the shaded bar? */
 .statusbar {
   background-image: url( "../images/android_statusbar.svg");
   background-repeat: no-repeat;
@@ -64,7 +63,7 @@ body {
 
 .backbutton {
   float: left;
-  width: 20%;
+  width: 15%;
   padding: 20px 0 0px 0;
 
 }
@@ -72,14 +71,12 @@ body {
 
 .busstoplocation {
 /* Washington @ State: */
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.25em;
-  color: #ffffff;
-  letter-spacing: .75px; /*not sure of need*/
+  letter-spacing: .75px;
   line-height: 20px;
   float: left;
-  width: 65%;
+  width: 70%;
   text-align: center;
   padding: 20px 40px 0 0;
 
@@ -116,12 +113,18 @@ body {
 
 }
 
-
-.card {
+  .card {
   box-shadow:0 4px 8px rgba(0,0,0,0.2),
             0 6px 20px rgba(0,0,0,0.6);
 
 }
+
+/***For this above effect, I watched this tutorial:
+https://m.youtube.com/watch?v=ioUKQn3MfkI and then
+changed the box sizing and increased the last value of
+rgba to make the shadow heavier, then experimented to
+figure out what needed to go where in the html :) ***/
+
 /*** end, Material Design Shadow ***/
 
 
@@ -134,10 +137,9 @@ body {
   padding-top: 15px;
   font-family:  'Roboto', sans-serif;
   font-size: .875em;
-  color: #ffffff;
   letter-spacing: 0px;
   line-height: 22px;
-  z-index: 2; /*What must I set this to for stuff to be able to scroll under my box shadow??*/
+  z-index: 2;
 
 }
 
@@ -148,29 +150,19 @@ body {
   background: #2096F7;
   box-shadow: inset .5 .5 .5 .5 #2A3D88;
   border-bottom: .03px solid #1D8AE4;
-  z-index: 1; /* Experimenting with these z-indices to see how layering works; so far nothing seems to change. Due to position setting or lack of?*/
-  padding: 16px 16px 0 16px;
-
-}
-
-
-.busnumwrapper {
-  float: left;
-  height: 100%;
-  width: 15%;
+  z-index: 1;
+  padding: 16px 14px 0 16px;
 
 }
 
 
 .busnum {
+  height: 100%;
+  width: 15%;
   float: left;
-  color: #ffffff;
-  font-size: 1.125em;
-  font-weight: 400;
   text-align: left;
 
 }
-
 
 
 .destinationwrapper {
@@ -181,6 +173,24 @@ body {
 }
 
 
+h2 {
+  font-weight: 400;
+  font-size: 1.125em;
+  color: #ffffff;
+  letter-spacing: -0.45px;
+
+}
+
+/* Destination Details */
+#deets {
+  color: #ffffff;
+  font-weight: 300;
+  padding: 6px 0 0 0;
+  font-size: .90em;
+
+}
+
+/* Arrival & Frequency Info*/
 .frequencywrapper {
   float: left;
   height: 100%;
@@ -190,44 +200,19 @@ body {
 }
 
 
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 1.125em;
-  color: #ffffff;
-  letter-spacing: -0.45px;
-
-}
-
-
 .arrival {
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.125em;
-  color: #ffffff;
   letter-spacing: -0.45px;
   padding: 0px 0 0 10px;
 
 }
-
 
 #nextbus {
   font-weight: 500;
   letter-spacing: 1px;
 
 }
-
-
-/* Destination Details */
-#deets {
-  font-weight: 300;
-  font-size: .875em;
-  line-height: 16px;
-  padding: 6px 0 0 0;
-  letter-spacing: 1x;
-
-}
-
 
 .frequency {
   font-weight: 300;
@@ -267,22 +252,13 @@ h2 {
 
 }
 
+
 /* Rerouted Arrival Time */
 #na {
   color: #FFFFFF;
-  font-size: 1em;
   font-weight: 300;
   letter-spacing: -0.3px;
   padding: 1px 0 0 10px;
-
-}
-
-
-.reroute .frequencywrapper {
-  float: left;
-  height: 100%;
-  width: 30%;
-  text-align:left;
 
 }
 
@@ -304,7 +280,7 @@ h2 {
   height: 60px;
   width: 100%;
   max-width: 360px;
-  margin-left: 0px;
+  margin: 0 auto;
   background: #000000;
   background-image: url( "../images/bottom_nav.svg");
   background-repeat: no-repeat;
